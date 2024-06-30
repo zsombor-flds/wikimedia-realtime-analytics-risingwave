@@ -1,13 +1,5 @@
 CREATE SOURCE wikichanges (
-    meta_uri varchar,
-    meta_request_id varchar,
-    meta_id varchar,
-    meta_dt timestamp,
-    meta_domain varchar,
-    meta_stream varchar,
-    meta_topic varchar,
-    meta_partition integer,
-    meta_offset bigint,
+    meta: jsonb
     id integer,
     type varchar,
     namespace integer,
