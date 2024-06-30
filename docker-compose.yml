@@ -103,3 +103,14 @@ services:
       CONNECT_HEAP_OPTS: -Xms512M -Xmx512M
       CONNECT_LOG_LEVEL: info
       CONNECT_PLUGIN_PATH: "/opt/kafka/connect-plugins"
+
+  risingwave:
+    container_name: risingwave
+    image: risingwavelabs/risingwave:latest
+    command: single_node
+    ports:
+      - "4566:4566"
+      - "5691:5691"
+    networks:
+      - redpanda_network
+    restart: always
