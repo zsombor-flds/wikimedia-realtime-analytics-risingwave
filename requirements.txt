@@ -1,0 +1,2 @@
+dbt-risingwave==1.7.4
+sqlfmt==0.0.3
