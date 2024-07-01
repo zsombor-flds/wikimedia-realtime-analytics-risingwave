@@ -1,5 +1,5 @@
 CREATE SOURCE wikichanges (
-    meta: jsonb
+    meta jsonb
     id integer,
     type varchar,
     namespace integer,
