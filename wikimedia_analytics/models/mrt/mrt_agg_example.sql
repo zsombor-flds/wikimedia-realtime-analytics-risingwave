@@ -1,4 +1,5 @@
-{{ config(materialized="materialized_view") }}
+{{ config(materialized="materialized_view",pre_hook="set rw_streaming_allow_jsonb_in_stream_key to true")
+ }}
 select
     (meta -> 'domain') as domain,
     min(to_timestamp(timestamp)) as min_edit,
