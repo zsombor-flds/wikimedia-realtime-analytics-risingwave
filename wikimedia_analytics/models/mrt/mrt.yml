@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: mrt_agg_example
+    description: ""
+    columns:
+      - name: domain
+        data_type: jsonb
+        description: ""
+
+      - name: min_edit
+        data_type: timestamp with time zone
+        description: ""
+
+      - name: max_edit
+        data_type: timestamp with time zone
+        description: ""
+
+      - name: total_records
+        data_type: bigint
+        description: ""
+
+      - name: distinct_users
+        data_type: bigint
+        description: ""
+
+      - name: bot_edits
+        data_type: bigint
+        description: ""
+
+      - name: human_edits
+        data_type: bigint
+        description: ""
+
+      - name: avg_comment_length
+        data_type: numeric
+        description: ""
+
+      - name: maximum_comment_length
+        data_type: integer
+        description: ""
+  - name: mrt_fct_example
+    description: ""
+    columns:
+      - name: domain
+        data_type: jsonb
+        description: ""
+
+      - name: timestamp
+        data_type: timestamp with time zone
+        description: ""
+
+      - name: user
+        data_type: character varying
+        description: ""
+        meta:
+          metrics:
+            total_unique_users:
+              type: count_distinct
+
+      - name: bot
+        data_type: boolean
+        description: ""
+
+      - name: comment
+        data_type: character varying
+        description: ""
+        meta:
+          metrics:
+            total_comments:
+              type: count
