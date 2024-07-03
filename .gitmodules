@@ -1,0 +1,4 @@
+[submodule "lightdash"]
+	path = lightdash
+	url = https://github.com/zsombor-flds/lightdash.git
+	branch = feat-add-risingwave-support
